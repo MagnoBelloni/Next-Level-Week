@@ -1,0 +1,21 @@
+--Dependencias do TS instalar com -D, 
+ex: "npm i ts-node -D", porque no runtime o código já vai ser JS,
+ou seja não tem necessidade das dependencias em produção;
+--É necessario instalar o "express" para controle de rotas;
+--É necessario instalar o "@types/express", pq o TS é tipado;
+--É necessario instalar o "ts-node", para executar, lá na bin dos node_modules estão os executavéis de scripts, para roda-los use (npx "nomeDoBin" "nomeDoArquivo");
+--É necessario instalar o "ts-node-dev" para executar sem dar stop e start;
+--É necessario iniciar um tsconfig.json, para isso "npx tsc --init";
+--Para rodar execute "npx ts-node-dev src/server.ts";
+--Para facilitar na hora de executar coloque o comando "ts-node-dev src/server.ts" nos package.json/scripts e
+de um "npm run dev"
+--Para o express entender o formato Json do Body da requisição, é necessario chamar "app.use(express.json());"
+--O Knex utiliza de uma forma padrão de querys para alguns bancos, podendo altera-los sem ter que trocar o código Sql;
+--Para configura-lo é necessario "npm i knex", criar uma connection com as configurações de coneção, criar migrations para modificar o banco,
+criar um arquivo na raiz chamado knex.file.ts e apontar a connection + a pasta de migrations.
+--Para rodar a migration rode "npx knex --knexfile knexfile.ts migrate:latest";
+--Para facilitar o comando da migration é mais facil colocar o comando no package.json e executa-lo com "npm run knex:migrate"
+--Para rodar o seed rode "npx knex --knexfile knexfile.ts seed:run";
+--Para facilitar o comando da migration é mais facil colocar o comando no package.json e executa-lo com "npm run knex:seed";
+--Para lidar com upload de imagens instale o multer com o npm, instale os types como dependecia de Dev;
+--Para validar campos utilize o celebrate. Para habilitar o intelisense dele instale o "npm i @types/hapi__joi -D";

@@ -1,0 +1,3 @@
+--Para acessar o localhost da máquina no emulador do android use "10.0.2.2",
+se passar o proprio "localhost(127.0.0.1)" ele vai querer acessar o localhost do celular.
+
